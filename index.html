@@ -54,7 +54,7 @@ header{
 nav a{
  color:#cbd5e1;
  text-decoration:none;
- margin-left:20px;
+ margin-left:18px;
  font-size:14px;
 }
 
@@ -105,6 +105,7 @@ nav a:hover{
 section{
  padding:65px 7%;
  text-align:center;
+ scroll-margin-top:20px;
 }
 
 h2{
@@ -169,6 +170,120 @@ h2{
  font-size:14px;
 }
 
+/* VERSION INFORMATION */
+
+.version-section{
+ padding-top:55px;
+}
+
+.version-card{
+ max-width:650px;
+ margin:auto;
+ background:linear-gradient(145deg,#111b30,#0d1729);
+ border:1px solid #294b80;
+ border-radius:18px;
+ padding:30px 25px;
+ text-align:left;
+}
+
+.version-top{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:12px;
+ margin-bottom:22px;
+}
+
+.version-top h3{
+ color:#60a5fa;
+ font-size:21px;
+}
+
+.beta-label{
+ background:#1e3a65;
+ color:#93c5fd;
+ padding:5px 13px;
+ border:1px solid #315b91;
+ border-radius:30px;
+ font-size:12px;
+}
+
+.version-number{
+ font-size:38px;
+ font-weight:bold;
+ color:#60a5fa;
+ margin-bottom:3px;
+}
+
+.version-caption{
+ color:#94a3b8;
+ font-size:13px;
+}
+
+.version-details{
+ border-top:1px solid #263650;
+ margin-top:22px;
+ padding-top:15px;
+}
+
+.version-row{
+ display:flex;
+ justify-content:space-between;
+ gap:12px;
+ padding:8px 0;
+ font-size:14px;
+}
+
+.version-row span{
+ color:#94a3b8;
+}
+
+.version-row strong{
+ color:#e2e8f0;
+}
+
+/* WHAT'S NEW */
+
+.update-card{
+ max-width:650px;
+ margin:auto;
+ background:linear-gradient(145deg,#111b30,#0d1729);
+ border:1px solid #263650;
+ border-radius:18px;
+ padding:28px;
+ text-align:left;
+}
+
+.update-card h3{
+ color:#60a5fa;
+ font-size:20px;
+ margin-bottom:18px;
+}
+
+.update-list{
+ list-style:none;
+}
+
+.update-list li{
+ color:#cbd5e1;
+ font-size:14px;
+ padding:10px 0;
+ border-bottom:1px solid #263650;
+}
+
+.update-list li:last-child{
+ border-bottom:none;
+}
+
+.update-list li::before{
+ content:"✓";
+ color:#60a5fa;
+ font-weight:bold;
+ margin-right:12px;
+}
+
+/* DOWNLOAD */
+
 .download{
  background:linear-gradient(120deg,#102d60,#172554);
  border:1px solid #294b80;
@@ -208,18 +323,11 @@ footer strong{
  color:#60a5fa;
 }
 
-@media(max-width:600px){
- .hero h1{
-  font-size:35px;
- }
-
- nav a{
-  margin-left:10px;
-  font-size:12px;
- }
-
+@media(max-width:700px){
  header{
-  padding:18px 5%;
+  padding:16px 5%;
+  flex-wrap:wrap;
+  gap:12px;
  }
 
  .logo{
@@ -232,8 +340,35 @@ footer strong{
   height:36px;
  }
 
+ nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+ }
+
+ nav a{
+  margin-left:0;
+  font-size:12px;
+ }
+
+ .hero h1{
+  font-size:35px;
+ }
+
+ .hero{
+  padding:75px 18px 65px;
+ }
+
  section{
   padding:50px 5%;
+ }
+
+ h2{
+  font-size:26px;
+ }
+
+ .version-number{
+  font-size:34px;
  }
 }
 </style>
@@ -249,6 +384,8 @@ footer strong{
 
  <nav>
   <a href="#features">Features</a>
+  <a href="#version-info">Version</a>
+  <a href="#whats-new">What's New</a>
   <a href="#download">Download</a>
  </nav>
 </header>
@@ -369,7 +506,7 @@ footer strong{
    <h3>Keyboard Mapper</h3>
    <p>Customize game controls for a better gaming experience.</p>
   </div>
-  
+
   <!-- Screen Recorder -->
   <div class="item">
    <div class="icon">
@@ -396,6 +533,67 @@ footer strong{
   </div>
 
  </div>
+</section>
+
+<!-- VERSION INFORMATION -->
+
+<section id="version-info" class="version-section">
+
+ <h2>Version Information</h2>
+
+ <div class="version-card">
+
+  <div class="version-top">
+   <h3>SR Launcher</h3>
+   <span class="beta-label">BETA</span>
+  </div>
+
+  <div class="version-number">0.1.0</div>
+  <div class="version-caption">Current App Version</div>
+
+  <div class="version-details">
+
+   <div class="version-row">
+    <span>Platform</span>
+    <strong>Android</strong>
+   </div>
+
+   <div class="version-row">
+    <span>Release Type</span>
+    <strong>Beta Testing</strong>
+   </div>
+
+   <div class="version-row">
+    <span>Developer</span>
+    <strong>SR MAHIN</strong>
+   </div>
+
+  </div>
+
+ </div>
+
+</section>
+
+<!-- WHAT'S NEW -->
+
+<section id="whats-new">
+
+ <h2>What's New</h2>
+
+ <div class="update-card">
+
+  <h3>Version 0.1.0 — Initial Beta Release</h3>
+
+  <ul class="update-list">
+   <li>Initial Beta Release of SR Launcher.</li>
+   <li>Launcher customization features.</li>
+   <li>App icon & name changer.</li>
+   <li>App privacy and security features.</li>
+   <li>More improvements coming soon!</li>
+  </ul>
+
+ </div>
+
 </section>
 
 <!-- DOWNLOAD SECTION -->
@@ -426,7 +624,7 @@ footer strong{
   </a>
 
   <p style="font-size:12px;margin-top:18px;">
-   Android APK • Beta Version
+   Android APK • Version 0.1.0
   </p>
 
  </div>
